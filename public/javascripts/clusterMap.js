@@ -1,4 +1,4 @@
-var map = L.map("map").setView([22.5937, 78.9629], 5);
+var map = L.map("map").setView([22.5937, 78.9629], 2);
 
 L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png")
     .addTo(map);
