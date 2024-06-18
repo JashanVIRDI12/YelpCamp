@@ -1,4 +1,4 @@
-var map = L.map("map").setView([40.66995747013945, -103.59179687498357], 3);
+var map = L.map("map").setView([22.5937, 78.9629], 5);
 
 L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png")
     .addTo(map);
@@ -6,9 +6,9 @@ L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png")
 var markers = L.markerClusterGroup();
 
 for (var i = 0; i < campgrounds.length; i++) {
-    var [latitude, longitude] = campgrounds[i].geometry.coordinates;
+    var [longitude, latitude] = campgrounds[i].geometry.coordinates;
     var title = campgrounds[i].properties.popUpMarkup;
-    var marker = L.marker(new L.LatLng(longitude, latitude), {
+    var marker = L.marker(new L.LatLng(latitude, longitude), {
         title: title,
     });
     marker.bindPopup(title);
